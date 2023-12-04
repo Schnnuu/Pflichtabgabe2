@@ -1,4 +1,4 @@
-public abstract class Person {
+public class Person {
     private String name;
     private char geschlecht;
 

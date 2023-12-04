@@ -3,42 +3,42 @@ public interface AdministrationInterface {
 	
 	
 	/**
-	 * sorts in ascending order the given list of persons by name 
-	 * @param list given list of persons to be sorted
+	 * sorts in ascending order the list of persons by name 
 	 * @return sorted list of persons
 	 * @throws NullPointerException if the list of persons is null
 	 * @throws IllegalStateException if the list of persons is empty
 	 */
-	public abstract Person[] sortList(Person[] list) 
+	public abstract Person[] sortList() 
 			throws NullPointerException, IllegalStateException;
 	
 	
 	/**
-	 * calculates number of female students
+	 * calculates number of female students in the list of persons
 	 * @return number of female students
 	 * @throws NullPointerException if the list of persons is null
 	 * @throws IllegalStateException if the list of persons is empty
 	 */
-	public abstract int countFemale(Person[] list) throws NullPointerException, IllegalStateException;
+	public abstract int countFemale() throws NullPointerException, IllegalStateException;
 	
 
 	/**
-	 * filters out docents working at a given department
+	 * filters out docents working at a given department from the list of persons
+	 *
 	 * @return list of docents
-	 * @throws NullPointerException if the list of persons is null
-	 * @throws IllegalStateException if the list of persons is empty
+	 * @throws NullPointerException     if the list of persons is null
+	 * @throws IllegalStateException    if the list of persons is empty
 	 * @throws IllegalArgumentException if the department number is not valid
 	 */
-	public abstract Docent[] getDocents(int department) 
+	public abstract Person[] getDocents(int department)
 			throws NullPointerException, IllegalStateException, IllegalArgumentException;
 	
 	
 	/**
 	 * print a given list of persons
-	 * @param list given list of persons
+	 * @param list a given list of persons
 	 * @throws NullPointerException if the list of persons is null
 	 */
-	public abstract void printList(Person[] list) throws NullPointerException;
+	public abstract void printList() throws NullPointerException;
 	
 	
 	/**
